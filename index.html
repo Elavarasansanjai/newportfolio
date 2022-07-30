@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elavrasan portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+                  * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+          }
+          html {
+            scroll-behavior: smooth;
+          }
+          body {
+            background-color: rgb(27, 27, 27);
+            color: #fff;
+          }
+          .sanjay-img {
+            max-width: 300px;
+            height: 320px;
+            border-radius: 5px;
+          }
+          .nav {
+            padding: 20px;
+          }
+          .nav-container {
+            justify-content: space-between;
+            display: flex;
+            padding: 20px 100px;
+            align-items: center;
+          }
+          .name {
+            font-weight: bold;
+            font-size: 24px;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            font-style: italic;
+          }
+          .nav-links {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+          }
+          .nav-links li {
+            margin: 0 20px;
+          }
+          .links {
+            text-decoration: none;
+            color: #fff;
+            font-family: serif;
+          }
+          .header {
+            padding: 20px 120px;
+
+            margin: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+          }
+          .self-content {
+            width: 400px;
+          }
+          .self {
+            font-family: sans-serif;
+            line-height: 40px;
+          }
+          .resume-btn {
+            padding: 10px;
+            border-radius: 7px;
+            outline: none;
+            border: none;
+            background-color: orangered;
+            color: white;
+            margin-top: 20px;
+          }
+          .img-content {
+            margin-top: 20px;
+          }
+          .img-con {
+            padding: 20px;
+            border: 3px solid rgb(37, 37, 37);
+            border-radius: 8px;
+          }
+          /* education-content start */
+          .education-content {
+            margin: 30px 0;
+            padding: 0 120px;
+          }
+          .education-conntainer {
+            margin: 20px 0;
+          }
+          .education {
+            height: 15px;
+            width: 60%;
+            background-color: #252525;
+          }
+          .skill {
+            display: flex;
+            margin: 20px 0;
+          }
+          .skill-name {
+            margin-left: 10%;
+          }
+          .html {
+            width: 90%;
+            height: 100%;
+            background-color: rgb(162, 0, 255);
+            border-radius: 0 5px 5px 0;
+          }
+          .css {
+            width: 80%;
+            height: 100%;
+            background-color: rgb(251, 255, 0);
+            border-radius: 0 5px 5px 0;
+          }
+          .js {
+            width: 85%;
+            height: 100%;
+            background-color: rgb(60, 255, 0);
+            border-radius: 0 5px 5px 0;
+          }
+          .phy {
+            width: 70%;
+            height: 100%;
+            background-color: rgb(0, 255, 234);
+            border-radius: 0 5px 5px 0;
+          }
+          .snap {
+            width: 90%;
+            height: 100%;
+            background-color: rgb(255, 0, 157);
+            border-radius: 0 5px 5px 0;
+          }
+          .k {
+            animation: progress-animation 2s forwards;
+          }
+          .r {
+            animation: progress-animation 2s reverse;
+          }
+          @keyframes progress-animation {
+            0% {
+              width: 0%;
+            }
+          }
+
+          /* education-content end */
+          /* project container start */
+          .projects-container {
+            margin: 30px 0;
+            padding: 0 120px;
+            justify-content: center;
+          }
+          .project-name {
+            justify-content: center;
+
+            text-align: center;
+          }
+          .project-name h1 {
+            margin-top: 20px;
+            margin-bottom: 25px;
+          }
+          .project-name img {
+            margin-bottom: 25px;
+            margin-top: 25px;
+          }
+          .project-name p {
+            margin-bottom: 25px;
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: lighter;
+            font-family: sans-serif;
+          }
+          .project-screenshot {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            justify-content: space-around;
+          }
+          .pro {
+            height: 200px;
+            width: 160px;
+            transition: all 0.8s ease-out;
+            opacity: 1;
+          }
+          .entry {
+            transform: translate(-10rem);
+            opacity: 0;
+            transition: 0.8s;
+          }
+          .smooth {
+            transition: 4s;
+            opacity: 0;
+            transform: translate(10rem);
+          }
+          /* project container end */
+          /* contect us start */
+          .contect-container {
+            justify-content: center;
+            display: flex;
+            margin-bottom: 40px;
+          }
+          .contect-heading h1 {
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-family: sans-serif;
+            color: rgb(238, 235, 235);
+          }
+          .firstname-lastname {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+          }
+          .input-type {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-family: sans-serif;
+            letter-spacing: 1.2px;
+            color: rgb(238, 232, 232);
+          }
+          .name-con {
+            margin-right: 20px;
+          }
+          .user-inp {
+            height: 40px;
+            width: 200px;
+            padding: 10px;
+            background-color: #252525;
+            color: white;
+            outline: none;
+            border: 1px solid #252525;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-size: 17px;
+          }
+          .conteect {
+            text-align: center;
+            margin-bottom: 30px;
+          }
+          .user-Email {
+            width: 420px;
+          }
+          .message {
+            width: 420px;
+            padding: 10px;
+            background-color: #252525;
+            color: white;
+            outline: none;
+            border: 1px solid #252525;
+            margin-bottom: 20px;
+            border-radius: 5px;
+          }
+          .sub-btn {
+            text-align: center;
+            justify-content: center;
+            padding: 10px 20px;
+            color: white;
+            background-color: orangered;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+          }
+          .sub {
+            justify-content: center;
+            text-align: center;
+          }
+          /* contect us end */
+          /* social start  */
+          .social-meadia-container {
+            justify-content: center;
+            text-align: center;
+          }
+          .img-san {
+            max-width: 350px;
+            max-height: 300px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+          }
+          .sociall {
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+          .sociall a {
+            margin: 0 15px;
+            color: white;
+            font-size: 30px;
+          }
+          /* social end */
+          /* menubar start */
+          .menu-container {
+            display: none;
+            align-items: center;
+            padding-top: 17px;
+          }
+          .menu {
+            height: 3px;
+            width: 20px;
+            background-color: white;
+            margin: 3px;
+          }
+          .menubar {
+            margin-left: 10px;
+            font-family: serif;
+            letter-spacing: 1.2px;
+            font-size: 20px;
+          }
+          /* menubar end */
+          @media only screen and (max-width: 550px) {
+            .nav-container {
+              justify-content: space-between;
+              display: flex;
+              padding: 5px;
+              align-items: center;
+              align-items: center;
+            }
+            .nav-links ul {
+              display: inline;
+              list-style-type: none;
+              align-items: center;
+              text-align: center;
+            }
+            .nav-container {
+              position: relative;
+            }
+            .nav-links li {
+              margin: 20px 20px;
+            }
+            .nav-links {
+              background-color: #2b2b2b;
+              position: absolute;
+
+              right: 1%;
+              top: 55px;
+              width: 100%;
+              text-align: center;
+              border-radius: 5px;
+
+              display: inline;
+            }
+
+            .header {
+              text-align: center;
+              padding: 10px 20px;
+              justify-content: center;
+              margin-bottom: 20px;
+            }
+            .resume-btn {
+              margin-bottom: 30px;
+            }
+            .education-content {
+              margin: 0px 0;
+              padding: 20px;
+            }
+            .education {
+              height: 15px;
+              width: 100%;
+              background-color: #252525;
+            }
+            .skill-name {
+              margin-left: 25%;
+            }
+            .projects-container {
+              margin: 30px 0;
+              padding: 0 10px;
+              justify-content: center;
+            }
+            .contect-container {
+              justify-content: start;
+              display: inline;
+              margin-bottom: 40px;
+              padding: 20px 20px;
+            }
+            .mobb {
+              display: none;
+            }
+            .firstname-lastname {
+              display: inline;
+              align-items: center;
+              flex-wrap: wrap;
+              width: 100%;
+              padding-left: 20px;
+            }
+            .input-type {
+              width: 100%;
+            }
+            .input-con {
+              width: 100%;
+            }
+            .user-inp {
+              width: 100%;
+            }
+            .name-con {
+              padding-left: 20px;
+            }
+            .name-conn {
+              padding-left: 20px;
+              padding-right: 0;
+            }
+            .textarea {
+              width: 100%;
+              padding: 0 20px;
+            }
+            .email {
+              width: 100%;
+              padding: 0 20px;
+            }
+            .message {
+              width: 100%;
+            }
+            .user-Email {
+              width: 100%;
+            }
+            .sociall a {
+              font-size: 20px;
+            }
+            .menu-container {
+              display: flex;
+              padding-top: 14px;
+            }
+            .m2 {
+              display: none;
+            }
+            .menus-icon {
+              margin-top: 3px;
+            }
+            .m1 {
+              transform: rotate(40deg);
+              transition: 0.2s;
+            }
+            .m3 {
+              transform: rotate(-45deg);
+              position: relative;
+              top: -6px;
+              transition: 0.2s;
+            }
+            .visible {
+              display: none;
+            }
+            .ii {
+              display: flex;
+            }
+
+            .pro1 {
+              transform: translateX(-100px);
+              opacity: 0;
+              transition: 0.8s;
+            }
+            .d {
+              transform: translateX(100px);
+              opacity: 1;
+              transition: 0.8s;
+            }
+            .projects-container {
+              margin: 30px 0;
+              padding: 0 20px;
+              justify-content: center;
+            }
+            .project-screenshot {
+              justify-content: center;
+            }
+          }
+          .pro1 {
+            transform: translateX(-70%);
+            transition: 0.5;
+            opacity: 0;
+          }
+          .pro2 {
+            transform: translateX(-200%);
+            transition: 0.8s;
+            opacity: 0;
+          }
+          .pro3 {
+            transform: translateX(-300%);
+            opacity: 0;
+            transition: 1s;
+          }
+          .pro4 {
+            transform: translateX(-400%);
+            opacity: 0;
+            transition: 1.2s;
+          }
+          .d {
+            transform: translateX(5%);
+            transition: 0.5s;
+            opacity: 1;
+          }
+          .e {
+            transform: translateX(9%);
+            transition: 0.8s;
+            opacity: 1;
+          }
+          .f {
+            transform: translateX(14%);
+            transition: 1s;
+            opacity: 1;
+          }
+          .j {
+            transform: translateX(17%);
+            transition: 1.2s;
+            opacity: 1;
+          }
+          .project-name h1 {
+            color: rgb(235, 235, 235);
+            font-family: sans-serif;
+          }
+          #skills {
+            margin-top: 30px;
+          }
+
+    </style>
+   
+  </head>
+  <body>
+    <!-- nav  start-->
+    <nav class="nav">
+      <div class="nav-container">
+        <p class="name">Elavarasan</p>
+        <div id="sa" class=" visible">
+          <ul class="nav-links">
+            <li><a class="links" href="##skills">SKILLS</a></li>
+            <li><a class="links" href="##works">WORKS</a></li>
+            <li><a class="links" href="##contect">CONTACT ME</a></li>
+          </ul>
+        </div>
+        <div class="menu-container">
+          <div class="menus-icon">
+            <div class="menu one"></div>
+            <div class="menu two"></div>
+            <div class="menu three"></div>
+          </div>
+          <p class="menubar">Menu</p>
+        </div>
+      </div>
+    </nav>
+    <!-- nav  end-->
+    <!-- header start -->
+    <header class="header">
+      <div class="self-content">
+        <p class="self">
+          Hi, I'm Elavarasan,co-Founder of Tweak Enterprises,a Front End Web
+          Developer. I enjoy creating designs and making them real-life.
+        </p>
+        <button class="resume-btn">My Resume</button>
+      </div>
+      <div class="img-content">
+        <div class="img-con">
+          <img src="./sanjay.image.jfif" class="sanjay-img" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <!-- header end-->
+    <!-- education content start -->
+    <div id="#skills" class="education-content">
+      <div class="education-conntainer">
+        <div class="education">
+          <div class="html barr"></div>
+        </div>
+        <div class="skill">
+          <p>90%</p>
+          <p class="skill-name">HTML</p>
+        </div>
+      </div>
+      <div class="education-conntainer">
+        <div class="education">
+          <div class="css barr"></div>
+        </div>
+        <div class="skill">
+          <p>80%</p>
+          <p class="skill-name">CSS</p>
+        </div>
+      </div>
+      <div class="education-conntainer">
+        <div class="education">
+          <div class="js barr"></div>
+        </div>
+        <div class="skill">
+          <p>85%</p>
+          <p class="skill-name">JAVA SCRIPT</p>
+        </div>
+      </div>
+      <div class="education-conntainer">
+        <div class="education">
+          <div class="phy barr"></div>
+        </div>
+        <div class="skill">
+          <p>70%</p>
+          <p class="skill-name">PHYTHON</p>
+        </div>
+      </div>
+      <div class="education-conntainer">
+        <div class="education">
+          <div class="snap barr"></div>
+        </div>
+        <div class="skill">
+          <p>90%</p>
+          <p class="skill-name">SNAPCHAT</p>
+        </div>
+      </div>
+    </div>
+    <!-- education content end -->
+    <!-- java script start-->
+    <div id="#works" class="projects-container">
+      <div class="project-name">
+        <h1>Java Script</h1>
+        <div class="project-screenshot">
+          <a class="screenshots-link" href="https://elavarasanmovieapp.netlify.app/">
+            <img src="./pro1.1.jfif" class="sanjay-img pro1"  alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanmovieapp.netlify.app/">
+            <img src="pro1.2.jfif" class="sanjay-img pro2 mobb" alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanmovieapp.netlify.app/">
+            <img src="./pro1.3.jfif" class="sanjay-img pro3 mobb" alt=""
+          /></a>
+          
+        </div>
+        <p>
+          Developed this website as a personal project to get deeper
+          understanding in java script and async javascript
+        </p>
+      </div>
+    </div>
+    <div class="projects-container">
+      <div class="project-name">
+        <h1>Java Script</h1>
+        <div class="project-screenshot">
+          <a class="screenshots-link" href="https://elavarasanshopingecomerce.netlify.app/">
+            <img src="./project-1.img1.jfif" class="sanjay-img pro1" alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanshopingecomerce.netlify.app/">
+            <img src="./project-1.img2.jfif" class="sanjay-img pro2 mobb" alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanshopingecomerce.netlify.app/">
+            <img src="./project-1.img3.jfif" class="sanjay-img pro3 mobb" alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanshopingecomerce.netlify.app/">
+            <img src="./project-1.img4.jfif" class="sanjay-img pro4 mobb" alt=""
+          /></a>
+        </div>
+        <p>
+          Developed this website as a personal project to get deeper
+          understanding in java script.
+        </p>
+      </div>
+    </div>
+    <div class="projects-container">
+      <div class="project-name">
+        <h1>HTML,CSS</h1>
+        <div class="project-screenshot">
+          <a class="screenshots-link" href="https://elavarasanecomerce.netlify.app/">
+            <img src="./pro3.1.jfif" class="sanjay-img pro1" alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanecomerce.netlify.app/">
+            <img src="./pro3.2.jfif" class="sanjay-img pro2 mobb" alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanecomerce.netlify.app/">
+            <img src="./pro3.3.jfif" class="sanjay-img pro3 mobb" alt=""
+          /></a>
+          <a class="screenshots-link" href="https://elavarasanecomerce.netlify.app/">
+            <img src="./pro3.4.jfif" class="sanjay-img pro4 mobb" alt=""
+          /></a>
+        </div>
+        <p>
+          Developed this website as a personal project to get deeper
+          understanding in html and css styling.
+        </p>
+      </div>
+    </div>
+    <!-- java script end-->
+    <!-- contect us start -->
+    <div id="#contect" class="contect-container">
+      <div>
+        <div class="contect-heading">
+          <h1 class="conteect">Contact Us</h1>
+        </div>
+        <div class="firstname-lastname">
+          <div class="name-con">
+            <p class="input-type">First Name</p>
+            <input type="text" placeholder="First Name" class="user-inp" />
+          </div>
+          <div class="name-con">
+            <p class="input-type">Last Name</p>
+            <input type="text" placeholder="Last Name" class="user-inp" />
+          </div>
+        </div>
+        <div class="email">
+          <p class="input-type">Email</p>
+          <input class="user-inp user-Email" type="email" placeholder="Email" />
+        </div>
+        <div class="textarea">
+          <p class="input-type">Message</p>
+          <textarea
+            placeholder="Message"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="message"
+          ></textarea>
+        </div>
+        <dir class="sub">
+          <button class="sub-btn">Submit</button>
+        </dir>
+      </div>
+    </div>
+    <!-- contect us end -->
+    <div class="social-meadia-container">
+      <div class="sociall">
+        <div>
+          <img src="./sanjay.black-img.jfif" class="img-san" alt="" />
+          
+        </div>
+        <div class="social ">
+          <a href="https://m.facebook.com/100052008711039/"><i class="sss fa-brands fa-facebook"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=9345448925&text=hi%20welcome%20to%20my%20whatshap"><i class="sss fa-brands fa-whatsapp-square"></i></i></a>
+          <a href="https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.instagram.com/sanjai_11122/&ved=2ahUKEwiO1NedjY_3AhVDDN4KHYvZCsQQFnoECAMQAQ&usg=AOvVaw3tmiwgCkK4ozwkvJ505lgJ"><i class="sss fa-brands fa-instagram-square"></i></a>
+          <a href="https://www.linkedin.com/in/elavara-san-b4473420b"><i class="sss fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <script>
+                       /*
+              // const callback = (e) => {
+              //   const [entry] = e;
+              //   if (entry.isIntersecting) {
+              //     // console.log("enter");
+
+              //     entry.target.classList.remove("entry");
+              //   } else {
+              //     entry.target.classList.add("entry");
+              //   }
+              // };
+              // const observer = new IntersectionObserver(callback, {
+              //   root: null,
+              //   threshold: 1.0,
+              // });
+              // document.querySelectorAll(".pro").forEach((mov) => {
+              //   observer.observe(mov);
+              // });
+              // document.querySelectorAll(".pro").forEach((mov) => {
+              //   mov.classList.add("entry");
+              // });*/
+
+              document.querySelector(".menus-icon").addEventListener("click", () => {
+                document.querySelector(".one").classList.toggle("m1");
+                document.querySelector(".two").classList.toggle("m2");
+                document.querySelector(".three").classList.toggle("m3");
+                document.querySelector(".visible").classList.toggle("ii");
+                console.log(document.querySelector(".ii"));
+              });
+
+              // const bar = document.querySelectorAll(".barr");
+
+              // const callback = (e) => {
+              //   const [entry] = e;
+              //   if (entry.Isintersecting) {
+              //     e.target.classList.add(".for");
+              //   } else {
+              //     e.target.classList.add(".bac");
+              //   }
+              // };
+              // const observer = new IntersectionObserver(callback, {
+              //   root: null,
+              //   threshold: 1.5,
+              // });
+              // bar.forEach((mov) => {
+              //   observer.observe(mov);
+              // });
+              const prograscallback = (entries) => {
+                const [entry] = entries;
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("k");
+                } else {
+                  entry.target.classList.remove("k");
+                }
+              };
+              const prograsobserver = new IntersectionObserver(prograscallback, {
+                threshold: 0.9,
+                root: null,
+              });
+              document.querySelectorAll(".barr").forEach((mov) => {
+                prograsobserver.observe(mov);
+              });
+
+              const pro1 = document.querySelectorAll(".pro1");
+              const pro2 = document.querySelectorAll(".pro2");
+              const pro3 = document.querySelectorAll(".pro3");
+              const pro4 = document.querySelectorAll(".pro4");
+
+              const callbackd1 = (e) => {
+                const [entry] = e;
+                if (entry.isIntersecting) {
+                  console.log(entry);
+                  entry.target.classList.add("d");
+                } else {
+                  console.log(entry);
+                  entry.target.classList.remove("d");
+                }
+              };
+              const observerr1 = new IntersectionObserver(callbackd1, {
+                threshold: 0.7,
+                root: null,
+              });
+              pro1.forEach((mov) => {
+                observerr1.observe(mov);
+              });
+              const callbackd2 = (e) => {
+                const [entry] = e;
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("e");
+                } else {
+                  entry.target.classList.remove("e");
+                }
+              };
+              const observerr2 = new IntersectionObserver(callbackd2, {
+                threshold: 0.7,
+                root: null,
+              });
+              pro2.forEach((mov) => {
+                observerr2.observe(mov);
+              });
+              const callbackd3 = (e) => {
+                const [entry] = e;
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("f");
+                } else {
+                  entry.target.classList.remove("f");
+                }
+              };
+              const observerr3 = new IntersectionObserver(callbackd3, {
+                threshold: 0.7,
+                root: null,
+              });
+              pro3.forEach((mov) => {
+                observerr3.observe(mov);
+              });
+              const callbackd4 = (e) => {
+                const [entry] = e;
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("j");
+                } else {
+                  entry.target.classList.remove("j");
+                }
+              };
+              const observerr4 = new IntersectionObserver(callbackd4, {
+                threshold: 0.7,
+                root: null,
+              });
+              pro4.forEach((mov) => {
+                observerr4.observe(mov);
+              });
+
+              ////routing js
+
+              // document.querySelectorAll(".screenshots-link").forEach((mov) => {
+              //   mov.addEventListener("click", (e) => {
+              //     e.preventDefault();
+              //     urlroute();
+              //   });
+              // });
+
+              // const urlroutes = {
+              //   pro1: {
+              //     template: "./routing.html",
+              //     title: "",
+              //     description: "gh",
+              //   },
+              //   pro2: {
+              //     template: "./routing.html",
+              //     title: "",
+              //     description: "v",
+              //   },
+              //   pro3: {
+              //     template: "./routing.html",
+              //     title: "",
+              //     description: "a",
+              //   },
+              // };
+
+              // const urlroute = (event) => {
+              //   event = event || window.event;
+              //   event.preventDefault();
+              //   window.history.pushState({}, "", event.target.href);
+              //   urlLocationHandler();
+              // };
+
+              // const urlLocationHandler = async () => {
+              //   const location = window.location.pathname;
+              //   const rout = urlroutes[location];
+              //   // const html = await fetch(rout.template).then((res) => res.text());
+              //   console.log(rout);
+              // };
+
+    </script>
+  </body>
+</html>
